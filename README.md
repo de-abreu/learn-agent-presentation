@@ -1,8 +1,5 @@
 # Fuzzy Concepts in Expert Systems: A Paper Review
 
-> A presentation held at the Timișoara Polytechnic University in 17 of April,
-> 2026
-
 This repository hosts the contents of the presentation and a complimentary nix
 flake to replicate the tools and configuration used for the presentation itself.
 
@@ -17,20 +14,17 @@ flake to replicate the tools and configuration used for the presentation itself.
 ### Using Nix Flakes
 
 With [nix installed](https://nixos.org/download/) and
-[flakes enabled](https://nixos.wiki/wiki/flakes), execute the following commands
+[flakes enabled](https://nixos.wiki/wiki/flakes), execute the following command
 in your terminal:
 
 ```bash
-git clone https://github.com/de-abreu/fuzzy-presentation.git
-cd fuzzy-presentation
-nix develop
-run-presentation
+nix run github:de-abreu/learn-agent-presentation
 ```
 
 You might also setup presenterm options as arguments:
 
 ```bash
-run-presentation --theme gruvbox-dark
+run-presentation --theme gruvbox-dark --export-pdf
 ```
 
 > [!NOTE]
@@ -44,13 +38,9 @@ fit.
 
 #### Obligatory
 
-| Package     | Version |
-| :---------- | :------ |
-| presenterm  | 0.15.1  |
-| typst       | 0.14.2  |
-| pandoc      | 3.7.0.2 |
-| mermaid-cli | 11.12.0 |
-| swi-prolog  | 9.2.9   |
+| Package    | Version |
+| :--------- | :------ |
+| presenterm | 0.15.1  |
 
 #### Optional
 
@@ -65,7 +55,7 @@ If you would like to
 #### Cloning the repository and launching the presentation
 
 ```bash
-git clone https://github.com/de-abreu/fuzzy-presentation.git
+git clone https://github.com/de-abreu/learn-agent-presentation.git
 cd fuzzy-presentation
-presenterm --config-file config.yaml fuzzy-presentation.md
+presenterm --config-file config.yaml code-config-curriculum.md
 ```
