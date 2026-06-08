@@ -29,7 +29,8 @@ run-presentation --theme gruvbox-dark --export-pdf
 
 > [!NOTE]
 >
-> For more information on presenterm options, check `presenterm --help`
+> For more information on presenterm options, check
+> `nix run github:de-abreu/learn-agent-presentation -- --help`
 
 ### Using whichever package manager is supported by your distribution
 
