@@ -172,7 +172,10 @@ Most major AI companies do provide solutions for education.
 
 ## We carve our own path
 
-> If the users don't control the program, the program controls the users. With proprietary software, there is always some entity, the "owner" of the program, that controls the program and through it, exercises power over its users. A nonfree program is a yoke, an instrument of unjust power.
+> If the users don't control the program, the program controls the users. With
+> proprietary software, there is always some entity, the "owner" of the program,
+> that controls the program and through it, exercises power over its users. A
+> nonfree program is a yoke, an instrument of unjust power.
 >
 > \- _Richard Stallman_
 
@@ -268,18 +271,11 @@ in
 
 ```markdown
 ---
+
 description: A teaching assistant for an introdutory Embedded Systems laboratory
-mode: primary
-model: opencode/deepseek-v4-flash-free
-temperature: 0.3
-color: "#87c05f"
-permission:
-  read: allow
-  glob: allow
-  grep: allow
-  bash:
-    "*": allow
-    "awk *": deny
+mode: primary model: opencode/deepseek-v4-flash-free temperature: 0.3 color:
+"#87c05f" permission: read: allow glob: allow grep: allow bash: "*": allow "awk
+*": deny
 ```
 
 ---
@@ -366,7 +362,8 @@ Skills are markdown files providing context to the agent (usually actionable)
 
 <!--column: 0-->
 
-We can create programs to be used by the agent and expose them to the agent as "tools"
+We can create programs to be used by the agent and expose them to the agent as
+"tools"
 
 <!--pause-->
 
@@ -455,9 +452,9 @@ All development environments are **available on Github**
 
 - Compatibility with Windows, through WSL
 
-- Planning of test suites with actual students
+- Finishing the implementation of a full course and conducting usability tests
+  with actual students
 
 - Publishing a Paper
 
-Conclusion / Q&A
-===
+# Conclusion / Q&A
