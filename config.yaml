@@ -15,7 +15,7 @@ bindings:
   reload:
   - r
 options:
-  end_slide_shorthand: true
+  end_slide_shorthand: false
   implicit_slide_ends: true
   list_item_newlines: 2
 snippet:
