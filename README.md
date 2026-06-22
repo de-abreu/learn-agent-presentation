@@ -1,6 +1,6 @@
-# Code, Config and Curriculum
+# Code, Config, and Curriculum
 
-This repository hosts the presentation titled _"Code, Config and Curriculum:
+This repository hosts the presentation titled _"Code, Config, and Curriculum:
 Aligning AI Assistants with Pedagogical Goals"_ and a complimentary Nix flake to
 replicate the tools and configuration used for the presentation itself.
 
