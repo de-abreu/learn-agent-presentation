@@ -1,13 +1,8 @@
-# Fuzzy Concepts in Expert Systems: A Paper Review
+# Code, Config and Curriculum
 
-This repository hosts the contents of the presentation and a complimentary nix
-flake to replicate the tools and configuration used for the presentation itself.
-
-> [!NOTE]
->
-> You can have a sense (with no videos, transitions, pauses nor interactivity)
-> of how the presentation would appear by looking at its
-> [exported pdf version](https://github.com/de-abreu/fuzzy-presentation/blob/main/fuzzy-presentation.pdf).
+This repository hosts the presentation titled _"Code, Config and Curriculum:
+Aligning AI Assistants with Pedagogical Goals"_ and a complimentary Nix flake to
+replicate the tools and configuration used for the presentation itself.
 
 ## How to run
 
@@ -18,13 +13,19 @@ With [nix installed](https://nixos.org/download/) and
 in your terminal:
 
 ```bash
-nix run github:de-abreu/learn-agent-presentation
+nix run github:de-abreu/learn-agent-presentation --  code-config-curriculum.md
 ```
 
-You might also setup presenterm options as arguments:
+To use the light theme:
 
 ```bash
-run-presentation --theme gruvbox-dark --export-pdf
+nix run github:de-abreu/learn-agent-presentation -- --theme light code-config-curriculum-light.md
+```
+
+You may also pass any other presenterm options as arguments:
+
+```bash
+nix run github:de-abreu/learn-agent-presentation -- --theme light --export-pdf code-config-curriculum-light.md
 ```
 
 > [!NOTE]
@@ -39,9 +40,10 @@ fit.
 
 #### Obligatory
 
-| Package    | Version |
-| :--------- | :------ |
-| presenterm | 0.15.1  |
+| Package     | Version |
+| :---------- | :------ |
+| presenterm  | 0.15.1  |
+| mermaid-cli | 11.12.0 |
 
 #### Optional
 
@@ -57,6 +59,6 @@ If you would like to
 
 ```bash
 git clone https://github.com/de-abreu/learn-agent-presentation.git
-cd fuzzy-presentation
-presenterm --config-file config.yaml code-config-curriculum.md
+cd learn-agent-presentation
+nix run . --theme dark code-config-curriculum.md
 ```
