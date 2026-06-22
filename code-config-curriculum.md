@@ -6,73 +6,82 @@ date: 11-04-2026
 theme:
   override:
     footer:
-      style: template
-      left: "Universitatea Politehnica Timișoara"
-      right: "{date}"
+      style: empty
 ---
 
-# Table of Contents
+# Guilherme de Abreu Barreto
 
-<!--incremental_lists: true-->
+<!-- speaker_note: |
+    Good evening.
 
-- Project description
-- Context and Motivation
-- Goals
-- Approach
-- Results
-- Limitations and Future Work
-- Conclusion / Q&A
+    I'm Guilherme de Abreu. An undergraduate student from the Institute of Mathematical Sciences and Computation of the University of São Paulo. And, for this semester, an Erasmus student from the Faculty of Automation and Computing here at UPT.
+-->
+
+<!--column_layout: [2, 1]-->
+
+<!--column: 0-->
+
+🇧🇷 Undergraduate student from the `University of São Paulo`
+
+<!--column: 1-->
+
+![Logo ICMC](./imgs/icmc-white.png)
+
+<!--new_line -->
+
+<!--pause-->
+
+<!--column_layout: [2, 1]-->
+
+<!--column: 0-->
+
+🇷🇴 Erasmus student at the `Politehnica University of Timișoara`
+
+<!--column: 1-->
+
+![Logo AC](./imgs/ac-white.png)
+
+<!-- new_line -->
+
+![image:width:100%](./imgs/upt-white.png)
 
 ---
 
 # Project description
 
-Can be described in terms of three interconnected components:
+<!-- speaker_note: |
+    I was invited here to show you a project I've developed over the course of these disciplines. What I did was create an Agent Harness to setup an AI Teaching Assistant that could guide other students perform laboratory exercises.
+-->
 
-<!--incremental_lists: true-->
+A project developed for the disciplines:
 
-1. Reproducible development environment
-2. An embedded AI agent
-3. A curriculum-aligned configuration
+- `Embedded Systems`
+- `Introduction to Internet of Things and Cloud Architectures`
 
 <!--pause-->
 
-All of which make use of Free and Open Source Software (FOSS) _exclusively_.
+An `Agent Harness` for an AI Teaching Assistant (AI TA).
 
-<!--
-speaker_note: |
-    1. A **reproducible development environment** for the students to reliably execute laboratory exercises,
-    2. An **embedded AI agent** to guide them through such exercises in a step by step fashion,
-    3. A **curriculum-aligned configuration** of the agent, for it to follow a pedagogical plan.
--->
+> [!IMPORTANT]
+>
+> Using **exclusively** Free and Open Source (FOSS) tools and AI models
 
 ---
 
 # Context and motivation
 
-<!--
-speaker_note: Why do I care about this, and maybe you should as well.
+<!-- speaker_note: |
+    Agent Harnesses are software systems built around AI models, enabling them to act autonomously over an environment with little to no human intervention. That is, they allow AI to become _Agentic_. A notable example is Claude Code, which popularized "vibe coding".
+
+    Since then, Agent Harnesses have proliferated across IDEs, graphics software, and even desktop environments like ChromeOS and Windows — it is not just for coding anymore.
 -->
 
----
-
-## Agent Harnasses
+## Agent Harnesses
 
 ![image:width:100%](imgs/crush-small.gif)
 
 Software systems that surround an AI model, managing its context, tools, and
 workflows.
-
-<!--no_footer-->
-
-<!--
-speaker_note: |
-    **Software systems built around an AI models - usually of the generative kind, such as Large Language Models -, managing its context, tools, and workflows**. That is, it provides the necessary tools that allow such models to perform tasks - that is, to become _Agentic_ -  and, with adequate setup, further do so in an efficient manner.
-
-    Put simply, besides the conversation, the Harness provides the model with the context of a shell user session it creates for it. The model can then prompt the Harness to execute commands and read back their outputs in a way that is autonomous with regards to the user. By having direct access to the context it is meant to act upon, once initially prompted, an agent is capable of completing its task without further human intervention.
-
-    The first such program that I've heard of was Claude Code, and it was massively influential - not to say viral, as its use popularized the term "vibe coding". Alternatives to it such as Gemini CLI and OpenAI's Codex soon emerged. Then there were IDEs that implemented harnesses front and center in their interface such as Cursor, Windsurf, Kiro, Antigravity. Now every Big Tech company is rushing to wrap their products in an Agent Harness as the default setting, be it from individual programs to the whole GUI of OSes, such as in ChromeOS, Windows and iOS.
--->
 
 ---
 
@@ -80,89 +89,50 @@ speaker_note: |
 
 <!-- column: 0 -->
 
-![](./imgs/framework-cover.png)
-
-<!-- column: 1 -->
-
 ## An AI Ultimatum
 
 How are we going to deal with the prospect of pervasive, potentially ubiquitous
 interaction with AI agents?
 
-<!-- speaker_note:|
-    The issues are manyfold. In terms of privacy, ethics, pedagogy, autonomy. One might be tempted to say we should chose the best option that is offered to us by one of these previously mentioned AI companies.
-    Worthy of mention:
-        https://grow.google/ai-for-educators/
-        https://edu.google.com/intl/ALL_us/ai/education/
+> To the right: Brazil's Ministry of Education publication on the topic
+
+<!-- column: 1 -->
+
+![](./imgs/framework-cover.png)
+
+<!--speaker_note: |
+    So, as if AI chatbots weren't enough of a disruption, now we need to deal with them becoming agentic. This is a broad and ongoing debate, but its consequences are already here and we need to start presenting solutions.
 -->
 
 ---
 
-### Some pressing issues regarding the use of AI in education
+### Which problems are being tackled here?
 
-<!--incremental_lists: true-->
+Usage of AI as a shortcut to direct solutions
 
-- Plagiarism and over reliance on AI for direct solutions
-- Loss of agency and capacity for critical evaluation
-- Lack of contextual awareness, alignment with a pedagogical plan or goal
-
----
-
-### Potentialities of developing AI _for_ education
-
-<!--incremental_lists: true-->
-
-- Reduced workload, greater availability
-- Mitigates all the previously stated downsides
-- Gives the student an opportunity to know alternatives to commercial AI usage
-
----
-
-## What are the solutions currently available?
-
-Most major AI companies do provide solutions for education.
+<!--speaker_note: |
+    That is the general context. Here I want to tackle a specific problem: the habit AI models have to solve everything for you even when you didn't ask them to.
+-->
 
 <!--pause-->
-
-![image:width:100%](./imgs/options.png)
-
-> From left to right: Google, OpenAI, Claude
-
----
-
-### Well... I don't buy it
-
-<!--pause-->
-
-- All are subject to vendor lock-in:
-  - You can only use their own proprietary AI models;
-  - They must be your providers (the ones to process your data);
-  - Configuration is done through proprietary APIs with no open standards.
-
-<!--pause-->
-
-- All subscription based.
-
-<!--pause-->
-
-- All subject to _enshittification_.
-
----
 
 #### Case in point
 
-<!-- jump_to_middle -->
+> [!IMPORTANT] Me
+>
+> I would like to know the message, given that I already know c and n.
 
-<!--column_layout: [ 2, 1] -->
+> [!NOTE] Agent
+>
+> To decrypt Rabin you need the private key (p, q) — the factors of n. Knowing
+> just c and n isn't enough unless n is small enough to factor.
+>
+> Do you also know p and q? If so, I can walk through the decryption. Or if you
+> show me n, I can check if it's factorable.
 
-<!--column: 0-->
-
-![](./imgs/false-advertising.png)
-
-<!--column: 1-->
-
-> Google is fined in almost one million Reais after being sued by University for
-> false advertising
+<!--speaker_note: |
+    Here is a conversation with Deepseek on Rabin Encryption. I'm withholding from it details, because I know if I provide them it'll try to solve it for me — I want the general formula, not the answer. But the model does not provide me with it, instead asking me for more information.
+-->
 
 ---
 
@@ -172,121 +142,228 @@ Most major AI companies do provide solutions for education.
 
 ## We carve our own path
 
-> If the users don't control the program, the program controls the users. With
-> proprietary software, there is always some entity, the "owner" of the program,
-> that controls the program and through it, exercises power over its users. A
-> nonfree program is a yoke, an instrument of unjust power.
+> [!IMPORTANT] Me
 >
-> \- _Richard Stallman_
+> Yes, I do know p and q.
 
-<!-- column: 1 -->
+> [!NOTE] Agent
+>
+> I need the actual numbers to compute it. Could you give me:
+>
+> - c (ciphertext)
+> - p and q (primes)
+>
+> Then I'll compute the 4 square roots via CRT and show you the candidates.
 
-![](./imgs/Revolution-OS.jpg)
+> [!IMPORTANT] Me
+>
+> No, I could not. Walk me through the steps.
 
-<!-- speaker_note:|
-    We cannot enforce rules over technologies we do not control, at least not reliably. And despite the intense lobbying by Big Tech Companies, we _can_ control them.
+<!-- speaker_note: |
+    I confirm I already have all necessary values. It prompts me again for those. I refuse and ask for step-by-step guidance instead, it then concedes and provides me with the guidance I was looking for.
+
+    You see, we start from different standpoints: I have specifics and want general knowledge to solve it myself — like browsing a textbook. The AI already has the general knowledge and wants specifics to solve what it assumes is _its_ task. This is the default production behavior, not an educational one. But this can change — it is a matter of AI alignment.
+-->
+
+---
+
+# Previous work
+
+> [!NOTE] Cutoff on May 4, 2026
+
+<!--speaker_note: |
+    AI Alignment means setting up AI to consistently work toward the user's goals and preferences, rather than pursuing unintended objectives.
+-->
+
+<!--incremental_lists: true-->
+
+- **A lot** of research available on the topic of `AI alignment` for pedagogical
+  goals.
+
+- but only **one paper** that uses it combined with an `Agent Harness`.
+
+<!--speaker_note: |
+    There is extensive research on this for AI Teaching Assistants, and for programming classes.
+
+    But I found only one example combining alignment with an Agent Harness embedded in a development environment — giving the AI more capability than a simple chatbot.
+-->
+
+---
+
+![](./imgs/sensai.png)
+
+> Chromium tab opened on SENSAI
+
+<!--speaker_note: |
+    That is SENSAI, an AI agent used to deliver classes on computer security "dojos". By introducing a massive security vulnerability to the system's kernel (but that is ok, since it is a virtual machine), this agent is able to see the user's current shell session and all changes they have made to any file as context for its next response, effectively following along the student's progress.
+-->
+
+---
+
+### Why make it _agentic_?
+
+The _unknown unknowns_ problem
+
+<!--speaker_note: |
+    But why give the AI agency at all? Isn't a chatbot enough?
+
+    Without agency, the AI relies on the student providing context — and we hit the "_unknown unknowns_" problem: learners still don't know what context matters. Like a trained human TA looking over a shoulder, we want the AI to infer from the environment directly. It's less friction, less back-and-forth.
 -->
 
 ---
 
 # Goals
 
+<!--speaker_note: |
+    Ok, so here is what I wanted to do: setup an AI teaching assistant through configuration using an Coding Agent Harness that is free and open source so that anyone can install it on their computer without the overhead of a Virtual Machine and a security vulerability such as the one seen in SENSAI.
+-->
+
+Produce an AI agent that is not a solver of the students' exercises, but offers
+guidance following a pedagogical plan.
+
 <!--pause-->
 
-1. Produce an AI agent that is not a solver of the students' exercises, but
-   offers guidance following a pedagogical plan.
-
-> Its first use case being guiding students in laboratory exercises of
-> **Embedded Systems** and **Internet of Things classes**.
-
-<!--pause-->
-
-2. In a fully free and open source development environment.
+In a `fully free and open source development environment` that users can install
+in their own computers.
 
 ---
 
-# Approach
+# Three layered approach
 
-<!-- speaker_note: A three layered implementation -->
+```mermaid +render
+stateDiagram-v2
+    state "Reproducible Development Environment" as Outer {
+        state "Agent Harness" as Middle {
+            state "Course specific configuration" as Inner
+        }
+    }
+```
 
+<!--speaker_note: |
+    The solution I've arrived at can be described in terms of a three layered approach comprised of:
+    - A Reproducible Development Environment
+    - that contains an Agent Harness
+    - that contains the course specific configuration
+-->
 ---
+
+## Reproducible Development Environment
 
 <!--column_layout: [1, 2]-->
 
-<!--column: 0 -->
+<!--column: 0-->
 
-## 1. Reproducible Development Environment
+### Devenv
 
-`devenv` manages dependencies and creates a shell session where the development
+<!--speaker_note: |
+    First, the development environment. Devenv, powered by Nix, installs dependencies, sets configuration, and runs everything in an isolated shell. Vimjoyer made a great video on it, available on YouTube, that I recommend checking out.
+-->
+
+Manages dependencies and creates a shell session where the development
 environment lives.
 
-<!--pause-->
+<!--column: 1-->
 
-> To the right: head of the `devenv.nix` file
+![](./imgs/cover.jpg)
 
-<!--column: 1 -->
-
-```nix
-{ inputs, lib, pkgs, config, ... }:
-let
-  inherit (config.devenv) root;
-  zed-local = inputs.wrappers.lib.wrapPackage {
-    inherit pkgs;
-    package = pkgs.zed-editor;
-    runtimeInputs = [ pkgs.opencode ];
-    env = {
-      ZED_LOCAL = true;
-      XDG_CONFIG_HOME = "${root}/.config";
-    };
-  };
-in
-{
-```
+> "Devenv.sh: Instant Reproducible Dev Environments with Nix" by Vimjoyer
 
 ---
-
-<!--no_footer-->
 
 ![](./imgs/zed-interface.png)
 
 > The _Learn_ agent running in Zed editor's Agent panel
 
+<!--speaker_note: |
+    Suffice to say it is the glue holding everything together. That is how I setup the Zed IDE to have my agent as its default agent and have all the dependencies specific to the course installed and available without any setup on the part of the user
+-->
+
 ---
 
-## 2. The agent harness: Opencode
+<!--column_layout: [1, 1]-->
 
-<!--column_layout: [1, 2]-->
+<!--column: 0-->
 
-<!--column: 0 -->
+## The Agent Harness
+
+<!--speaker_note: |
+    Next up there is the OpenCode, the Agent Harness. OpenCode manages agents and through configuration assigns those
+
+    - roles,
+    - AI models,
+    - access to tools
+    - and skills.
+
+    The configuration is managed though markdown, json, and yaml files such as that you see here to the right. Now let's go through each of these aspects of the agent's configuration
+-->
+
+### Opencode
+
+Manages agents and assigns those
 
 <!--incremental_lists: true-->
 
-- Exposes tools and "skills", sets permissions
-
-- Assigns the AI Model and connects to the provider
+- roles
+- AI models
+- tools
+- _skills_
 
 > To the right: head of the `Learn.md` file
 
 <!--column: 1-->
 
-```markdown
----
-
-description: A teaching assistant for an introdutory Embedded Systems laboratory
-mode: primary model: opencode/deepseek-v4-flash-free temperature: 0.3 color:
-"#87c05f" permission: read: allow glob: allow grep: allow bash: "*": allow "awk
-*": deny
+```yaml
+description: A teaching assistant for an introductory Embedded Systems laboratory
+mode: primary
+model: opencode/deepseek-v4-flash-free
+temperature: 0.3
+color: "#87c05f"
+permission:
+  read: allow
+  glob: allow
+  grep: allow
+  bash:
+    "*": allow
+    "awk *": deny
+    "cp *": deny
+    "curl * --output *": deny
+    "curl * --remote-name *": deny
 ```
 
 ---
 
-### On the choice of AI model and provider
+### Role
 
-<!--incremental_lists: true-->
+<!--column_layout: [3, 1]-->
 
-- Agent harnesses significantly improve the performance of smaller AI models.
-- Free and Open Source models display comparable performance at a fraction of
-  the cost of the proprietary Frontier models.
+<!--column: 0-->
+
+```markdown
+# Learn Agent
+
+You are a teaching assistant in an Embedded Systems laboratory. With the skills
+you are given, you should aid the student (i.e.: the user) by providing guidance
+in an instructive and thorough manner, with proper explanations at each step,
+and performing checks and validations, whenever necessary;
+
+Communicate with warmth and enthusiasm. Acknowledge effort and small wins,
+reassure the student when they struggle, and frame challenges as stepping stones
+rather than obstacles.
+```
+
+<!--column: 1-->
+
+> Start of the Learn agent textual description
+
+<!--speaker_note: |
+    A role is a major aspect of the agent alignment: it outlines its intended behavior when interacting to the user. This excerpt are the first two paragraphs of the Teaching Assistant role's description.
+-->
+
+---
+
+### AI model: Deepseek V4 Flash
+
+<!--speaker_note: Next up there is the AI model that empowers the agent. I chose Deepseek V4 Flash for that. -->
 
 ---
 
@@ -294,11 +371,23 @@ mode: primary model: opencode/deepseek-v4-flash-free temperature: 0.3 color:
 
 ![](./imgs/pareto-frontier.png)
 
+> Elo versus cost per million tokens
+
+<!--speaker_note: |
+    First, because in a cost versus performance comparison for coding tasks by LMArena shows Deepseek is _Pareto Optimal_.
+
+    Second, because even though it is cheaper and smaller model, we can makeup for its lack of pre-training by providing it with the necessary context of our courses through the Agent Harness.
+-->
+
 ---
 
 #### Multiple provider options
 
 ![](./imgs/open-router.png)
+
+<!--speaker_note: |
+    Third, as a FOSS model we are not limited in our choice of provider by vendor lockdown
+-->
 
 ---
 
@@ -306,26 +395,73 @@ mode: primary model: opencode/deepseek-v4-flash-free temperature: 0.3 color:
 
 ![](./imgs/thunder-compute.png)
 
----
-
-#### Current provider: Opencode Zen
-
-<!--incremental_lists: true-->
-
-- Does not require API key setup
-- DeepSeek V4 Flash available for free
-
-> [!IMPORTANT]
->
-> Does store conversations to train their model.
+<!-- speaker_note: |
+    We are not even bound to have a provider: we can rent out GPU farms and self-host.
+-->
 
 ---
 
-<!--column_layout: [1, 2]-->
+#### Training your own models
+
+![](./imgs/rio_3-5.png)
+
+<!--speaker_note: |
+    With that setup we could even fine-tune the model's pretraining directly for our own goals. It is known to have happened before.
+-->
+
+---
+
+### Tools
+
+<!--speaker_note: |
+    Moving on to tools, these are the various executables, commands, our agent has access to. These are made accessible through a bash shell, and we can even add some programs and scripts of our own and instructions on how and when to use those. For example, I've implemented a tool for it to submit class reports.
+-->
+
+<!--column_layout: [1, 1]-->
 
 <!--column: 0-->
 
-## 3. Skill scaffolding
+We can create programs to be used by the agent and expose them to the agent as
+`tools`
+
+<!--pause-->
+
+> To the right: files for the implementation of a tool to send class reports
+
+<!--column: 1-->
+
+```bash
+.opencode/scripts
+├── build_payload.py
+└── submit-report.sh
+.claude/skills/submit-report
+└── SKILL.md
+.opencode/tools
+└── submit-report.ts
+```
+
+---
+
+#### Report server
+
+![](./imgs/control-panel.png)
+
+> Control panel of the report server
+
+<!-- speaker_note: Here is the control panel of the server that should receive those reports. -->
+
+---
+
+## Skill scaffolding
+
+<!--speaker_note: |
+    Finally, the skill scaffolding — the meat of the configuration. Skills are markdown documents providing context when certain topics appear.
+
+    Say the user says "Hi": the introduction skill triggers, the agent presents itself and offers to guide the student in a class. Accepting the offer triggers class-selection skill, and so on. Skills are flat structure, so users can go back and forth to review while still progressing.
+-->
+<!--column_layout: [1, 2]-->
+
+<!--column: 0-->
 
 Skills are markdown files providing context to the agent (usually actionable)
 
@@ -356,105 +492,60 @@ Skills are markdown files providing context to the agent (usually actionable)
 
 ---
 
-## 4. Tooling
+### Checks
 
-<!--column_layout: [2, 1]-->
+<!--speaker_note: |
+    As a result, we get a agent that can perform checks, such as seeing the filesystem before suggesting flashing an image to an SD card. Seeing if there is an Ethernet port or Wi-fi connection available to connect to a Raspberry Pi.
+-->
 
-<!--column: 0-->
+![](./imgs/checks.png)
 
 We can create programs to be used by the agent and expose them to the agent as
 "tools"
 
-<!--pause-->
+### Guidance
 
-> To the right: files for the implementation of a tool to send class reports
+![](./imgs/guidance.png)
 
-<!--column: 1-->
+<!--speaker_note: Provides guidance, tracks progress, and incentivizes the student to follow through the exercises in a step-by-step manner. -->
+
+---
+
+### Validations
+
+<!-- speaker_note: Validates the solutions developed by the students, by running tests -->
+
+![](./imgs/validation.png)
+
+---
+
+# Where to find, and how to experiment with, the project
+
+<!--speaker_note: Finally, the source code for everything you see here is available on Github -->
+
+All source code available `available on GitHub`
+
+- Embedded Systems Laboratory: `de-abreu/es-labs`
+- Internet of Things Laboratory: `de-abreu/iot-labs`
+- Report server: `de-abreu/report-server`
+- This presentation: `de-abreu/learn-agent-presentation`
+
+---
+
+## Installing and launching
+
+<!-- speaker_note: The initial setup is simply a matter of cloning the git repository and running devenv in the working directory. -->
+
+Having git and devenv installed, execute the commands described in the README.
+
+### Example
 
 ```bash
-.opencode/scripts
-├── build_payload.py
-└── submit-report.sh
-.claude/skills/submit-report
-└── SKILL.md
-.opencode/tools
-└── submit-report.ts
+git clone https://github.com/de-abreu/iot-labs.git
+cd iot-labs
+devenv shell start
 ```
 
 ---
 
-## 5. Report server
-
-<!--column_layout: [2, 1]-->
-
-<!--column: 0-->
-
-![](./imgs/control-panel.png)
-
-<!--column: 1-->
-
-### Report contents
-
-- Class summary
-
-- User evaluation of the guidance provided
-
----
-
-# Results
-
-All development environments are **available on Github**
-
-<!--pause-->
-
-- **Prerequisites:** having git and devenv installed on any Unix-based OS.
-
-<!--pause-->
-
-- Execute the following commands to install all dependencies and launch:
-
-  - Laboratories:
-
-    - ES:
-      `git clone https://github.com/de-abreu/es-labs.git && devenv shell start`
-
-    - IoT:
-      `git clone https://github.com/de-abreu/iot-labs.git && devenv shell start`
-
-  - Reports:
-    `git clone https://github.com/de-abreu/report-server.git && devenv up`
-
----
-
-## Tests
-
-<!--incremental_lists: true-->
-
-- The agent was able to walk through all classes, staying on point with the
-  skills provided, and producing reports.
-
-- Inaccuracies occurred whenever the skill files were not precise enough. Most
-  of the work of aligning the agent was done in fine-tuning skill files.
-
-- Further testing is required with a larger sample to reach actionable
-  conclusions.
-
----
-
-# Limitations and Future Work
-
-<!--incremental_lists: true-->
-
-- Decoupling of the Laboratories' skills, the agent configuration , and the
-  development environments
-
-- Implementation of a solution for API key generation and handling at scale
-
-- Compatibility with Windows, through WSL
-
-- Finishing the implementation of a full course and conducting usability tests
-  with actual students
-
-- Publishing a Paper
-
-# Conclusion / Q&A
+# Vă mulțumesc tuturor pentru atenție.
